@@ -7,14 +7,14 @@
     var confirmUppercase;  
     var confirmLowercase; 
 
-    special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    uppercase = ["A", "A", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+    var number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var uppercase = ["A", "A", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
     var choices;
 
-    var get = document.querySelector("#generate");
+    var get = document.querySelector("#generateBtn");
 
 get.addEventListener("click", function () {
     ps = generatePassword();
@@ -28,7 +28,7 @@ get.addEventListener("click", function () {
 
 function generatePassword() {
 
-    enter = parseInt(prompt ("How many characters you want it to be? 8-128");
+    enter = parseInt(prompt ("How many characters you want it to be? 8-128"));
 
     if (!enter) {
         alert("This needs a value");
@@ -41,7 +41,7 @@ function generatePassword() {
 } else {
    
     confirmSpecial = confirm ("Do you want to use special characters?");
-    confirmNumbers = confirm ("Do you want to use numbers?");
+    confirmNumber = confirm ("Do you want to use numbers?");
     confirmUppercase = confirm ("Do you want to use Uppercase?");
     confirmLowercase = confirm ("Do you want to use Lowercase?");
 
